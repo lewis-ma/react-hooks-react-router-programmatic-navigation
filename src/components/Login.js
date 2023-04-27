@@ -17,11 +17,20 @@ function Login({ setIsLoggedIn }) {
 
   function handleSubmit(e) {
     e.preventDefault();
+    fetch("http://localhost:3000/login")
+     method:"post"
+     headers:{
+      // "Content-Type": "application/json",
+      "Programmatic Navigation ";
+      };
+      body: JSON.stringify(formData),
+    
+     
 
     setIsLoggedIn(true);
 
     // after logging the user in, redirect to the home page!
-    history.push("/");
+    history.push("/login");
   }
 
   return (
